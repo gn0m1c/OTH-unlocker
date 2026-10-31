@@ -29,11 +29,3 @@ node unlock.cjs --restore "backups\TIMESTAMP" --apply  # restore
 ```
 
 Restore first backs up your current saves, then restores the selected profile to its backup-time progress and updates its `.bak` fallback. Later progress in that profile is lost; fog-of-war and animal files are left alone. Full copies remain available in each backup's `Saves` subfolder. Check any Steam cloud conflict carefully so the intended local save is retained.
-
-## Compatibility and checks
-
-Catalog: build `26.10.30_426818B`, Unity `6000.0.75f1`, save versions 15 and 17. Cars, cosmetics, liveries, and currency were tested in the original investigation. Upgrade/tool handling follows existing save records and ownership serialization; the packaged full-upgrade edit still needs an in-game check. Multiplayer and cloud conflict recovery were not tested.
-
-Run `npm test` for offline checks. No personal saves, game binaries, or original investigation dumps are included. This is an unofficial tool; future game builds may need an updated catalog.
-
-Upload this folder as a Git repository. Add your server with `git remote add origin <URL>`, then run `git push -u origin main`. If starting from the ZIP, first initialize Git and commit the files.
